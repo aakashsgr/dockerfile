@@ -21,5 +21,6 @@ jobs:
        docker login docker.pkg.github.com --username aakashsgr --password ${{ secrets.GITHUB_TOKEN }}
        docker push docker.pkg.github.com/aakashsgr/dockerfile/test:${VERSION}
        docker images -a
-       docker run -t docker.pkg.github.com/aakashsgr/dockerfile/test aakash
+       # docker pull docker.pkg.github.com/aakashsgr/dockerfile/test:1598032174
+       docker run -t docker.pkg.github.com/aakashsgr/dockerfile/test:1598032174 aakash
        docker ps
