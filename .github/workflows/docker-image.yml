@@ -22,5 +22,5 @@ jobs:
        docker push docker.pkg.github.com/aakashsgr/dockerfile/test:${VERSION}
        docker images -a
        # docker pull docker.pkg.github.com/aakashsgr/dockerfile/test:1598032174
-       docker run -t docker.pkg.github.com/aakashsgr/dockerfile/test:1598032174 aakash
+       docker run -t docker.pkg.github.com/aakashsgr/dockerfile/test:1598032174 
        docker ps
