@@ -20,4 +20,5 @@ jobs:
        docker build . --file Dockerfile --tag docker.pkg.github.com/aakashsgr/dockerfile/test:${VERSION}
        docker login docker.pkg.github.com --username aakashsgr --password ${{ secrets.GITHUB_TOKEN }}
        docker push docker.pkg.github.com/aakashsgr/dockerfile/test:${VERSION}
-       docker run -it docker.pkg.github.com/aakashsgr/dockerfile/test python Task1_Test.py
+       
+       docker container run docker.pkg.github.com/aakashsgr/dockerfile/test
