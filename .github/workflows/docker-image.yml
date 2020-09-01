@@ -18,7 +18,7 @@ jobs:
       run: | 
        VERSION=$(date +%s)
        docker build . --file Dockerfile --tag docker.pkg.github.com/aakashsgr/dockerfile/test:${VERSION} 
-       docker login docker.pkg.github.com --username aakashsgr --password ${{ secrets.GITHUB_TOKEN }}
+       docker login docker.pkg.github.com --username aakashsgr --password-stdin ${{ secrets.GITHUB_TOKEN }}
        docker push docker.pkg.github.com/aakashsgr/dockerfile/test:${VERSION}
        docker images -a
        # docker pull docker.pkg.github.com/aakashsgr/dockerfile/test:1598032174
