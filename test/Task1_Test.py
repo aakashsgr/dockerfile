@@ -14,7 +14,7 @@ class Testing(unittest.TestCase):
         self.assertEqual(product.Product.addProduct(5), 6)
 
     def test_removeProduct(self):
-        self.assertEqual(product.Product.removeProduct(5), 3)
+        self.assertEqual(product.Product.removeProduct(5), 4)
 
 
 if __name__ == '__main__':
